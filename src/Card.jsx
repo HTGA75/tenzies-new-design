@@ -18,7 +18,7 @@ export default function Card(props){
     const [dices, setDices] = useState(() => (
         Array.from({ length: 10 }, () => (
             {
-                value: 6, //Math.floor(Math.random() * 6 + 1)
+                value: Math.floor(Math.random() * 6 + 1),
                 held: false,
             }
         ))
