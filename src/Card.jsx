@@ -9,16 +9,17 @@ import ReactConfetti from "react-confetti";
     - Match values when all the dices are clicked for the **confetti** -
     - Display Luck according the count value -
     - Design the dices in a way for the user to get feedback when the dice is being held or not -
-    - final touch up of the design
-    - Double check for edge cases
-        -- padding in the dice buttons
+    - Make it Responsive -
+    - final touch up of the design -
+    - Double check for edge cases -
+    - Try adding sound effect to clicks
 */
 
 export default function Card(props){
     const [dices, setDices] = useState(() => (
         Array.from({ length: 10 }, () => (
             {
-                value: Math.floor(Math.random() * 6 + 1),
+                value: 6,//Math.floor(Math.random() * 6 + 1),
                 held: false,
             }
         ))
