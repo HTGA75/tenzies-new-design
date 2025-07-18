@@ -57,6 +57,7 @@ export default function Card(props){
         ))))
         setCount(0)
         setGameWon(false)
+        props.handleConfetti()
     }
 
     function handleHold(index){
