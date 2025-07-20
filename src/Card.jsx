@@ -103,7 +103,7 @@ export default function Card(props){
         <div className="game-card">
             <h1>Tenzies</h1>
             <p className="game-info">
-                {gameWon ? getLuckMessage(count) : "Roll until all dice are the same. Click each die to freeze it at its current value between rolls."}
+                {gameWon ? getLuckMessage(count) : "Roll until all dices are the same. Click each die to freeze it at its current value between rolls."}
             </p>
             <h4 className="count">Count : {count}</h4>
             {diceValues}
