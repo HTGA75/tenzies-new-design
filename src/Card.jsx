@@ -94,7 +94,7 @@ export default function Card(props){
     }
 
     function getLuckMessage(count) {
-        if (count < 5) return "You are very lucky.";
+        if (count <= 5) return "You are very lucky.";
         if (count > 20) return "You are not so lucky. You need to work hard for your goals.";
         return "You are lucky.";
     }
@@ -105,7 +105,7 @@ export default function Card(props){
             <p className="game-info">
                 {gameWon ? getLuckMessage(count) : "Roll until all dice are the same. Click each die to freeze it at its current value between rolls."}
             </p>
-            <p className="count">Count : {count}</p>
+            <h4 className="count">Count : {count}</h4>
             {diceValues}
             <button className="roll-btn" onClick={handleClick}>{gameWon ? 'New Game' : 'Roll'}</button>
         </div>
