@@ -1,8 +1,12 @@
 {
-  "name": "tenziescopy",
+  "name": "tenzies-new-design",
+  "version": "0.1.0",
   "private": true,
-  "version": "0.0.0",
+  "description": "Mordern new design for the classic game of tenzies",
+  "license": "ISC",
+  "author": "",
   "type": "module",
+  "main": "eslint.config.js",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
