@@ -1,5 +1,9 @@
 import React, { useEffect, useState } from "react"
 import ReactConfetti from "react-confetti";
+import useSound from "use-sound";
+import boopSfx from './assets/sounds/boop.mp3';
+import Win from './assets/sounds/Win.wav'
+import confetti from './assets/sounds/confetti.mp3'
 
 /*
     To do:
@@ -12,14 +16,14 @@ import ReactConfetti from "react-confetti";
     - Make it Responsive -
     - final touch up of the design -
     - Double check for edge cases -
-    - Try adding sound effect to clicks
+    - Try adding sound effect to clicks - 
 */
 
 export default function Card(props){
     const [dices, setDices] = useState(() => (
         Array.from({ length: 10 }, () => (
             {
-                value: 6,//Math.floor(Math.random() * 6 + 1),
+                value: Math.floor(Math.random() * 6 + 1),
                 held: false,
             }
         ))
@@ -36,14 +40,22 @@ export default function Card(props){
         if(heldDices.length === dices.length && allEqual){
             setGameWon(prevState => !prevState)
             props.handleConfetti()
+            playConfetti()
         }
     }, [dices])
+
+    const [playClick] = useSound(boopSfx)
+    const [playWin] = useSound(Win)
+    const [playConfetti] = useSound(confetti)
 
     const diceValues = dices.map((e, i) => (
         <button
             key={i}
             className={`dice${e.held ? ' held' : ''}`}
-            onClick={() => handleHold(i)}
+            onClick={() => {
+                handleHold(i)
+                playClick()
+            }}
         >
             {e.value}
         </button>
@@ -52,13 +64,14 @@ export default function Card(props){
     function generateAllNewDices(){
         setDices(() => (Array.from({ length: 10 }, () => (
             {
-                value: 6, //Math.floor(Math.random() * 6 + 1), 
+                value: Math.floor(Math.random() * 6 + 1), 
                 held: false,
             }
         ))))
         setCount(0)
         setGameWon(false)
         props.handleConfetti()
+        playWin()
     }
 
     function handleHold(index){
