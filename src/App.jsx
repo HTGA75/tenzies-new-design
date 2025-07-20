@@ -17,7 +17,11 @@ function App() {
 
   return (
     <>
-      {condConfetti && <ReactConfetti style={{ zIndex: -1 }} />}
+      {condConfetti && <ReactConfetti 
+        style={{ zIndex: -1 }}
+        width={window.innerWidth}
+        height={window.innerHeight}
+      />}
       <Card 
         handleConfetti = {handleConfetti}
       />
