@@ -4,6 +4,7 @@ import useSound from "use-sound";
 import boopSfx from './assets/sounds/boop.mp3';
 import Win from './assets/sounds/Win.wav'
 import confetti from './assets/sounds/confetti.mp3'
+import dice from './assets/sounds/dice.mp3'
 
 /*
     To do:
@@ -47,6 +48,7 @@ export default function Card(props){
     const [playClick] = useSound(boopSfx)
     const [playWin] = useSound(Win)
     const [playConfetti] = useSound(confetti)
+    const [diceRoll] = useSound(dice)
 
     const diceValues = dices.map((e, i) => (
         <button
@@ -84,6 +86,7 @@ export default function Card(props){
         if(gameWon){
             generateAllNewDices()
         }else{
+            diceRoll()
             setDices(prevState => prevState.map(e => e.held ? e : {...e, value:Math.floor(Math.random() * 6 + 1)}))
             setCount(prevCount => prevCount + 1)
         }
