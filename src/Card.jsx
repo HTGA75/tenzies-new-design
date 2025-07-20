@@ -52,7 +52,7 @@ export default function Card(props){
     function generateAllNewDices(){
         setDices(() => (Array.from({ length: 10 }, () => (
             {
-                value: Math.floor(Math.random() * 6 + 1), 
+                value: 6, //Math.floor(Math.random() * 6 + 1), 
                 held: false,
             }
         ))))

@@ -3,7 +3,6 @@
     grid-template-columns: repeat(5, minmax(2em, 1fr));
     grid-template-rows: repeat(6, 1fr);
     max-height: 60vh;
-    min-width: 30vw;
     padding: 12px;
     /*For giving glassy effect to the card*/
     background-color: rgba(211, 211, 211, 0.176);
@@ -34,7 +33,7 @@
     width: 3.5em;
     font-size: large;
     font-weight: 500;
-    margin: 10px auto;
+    margin: 10px 40px;
     border-radius: 5px;
     border: none;
     box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.276);
@@ -72,13 +71,14 @@
     box-shadow: 0 2px 8px rgba(157, 157, 157, 0.2) inset;
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 777px) {
   .game-card {
     max-height: 75vh;
     width: 80vw;
   }
   .dice{
-    width: 2.5em;
+    width: 3em;
+    margin: 10px auto;
   }
 }
 

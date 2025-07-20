@@ -17,7 +17,7 @@ function App() {
 
   return (
     <>
-      {condConfetti && <ReactConfetti />}
+      {condConfetti && <ReactConfetti style={{ zIndex: -1 }} />}
       <Card 
         handleConfetti = {handleConfetti}
       />
