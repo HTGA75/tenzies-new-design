@@ -47,7 +47,7 @@ export default function Card(props){
 
     const [playClick] = useSound(boopSfx)
     const [playWin] = useSound(Win)
-    const [playConfetti] = useSound(confetti)
+    const [playConfetti, {stop}] = useSound(confetti)
     const [diceRoll] = useSound(dice)
 
     const diceValues = dices.map((e, i) => (
@@ -73,6 +73,7 @@ export default function Card(props){
         setCount(0)
         setGameWon(false)
         props.handleConfetti()
+        stop()
         playWin()
     }
 
