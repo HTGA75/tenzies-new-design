@@ -38,4 +38,4 @@ A fun and interactive browser-based dice game built with React. The goal is simp
 
 ```bash
 git clone https://github.com/htga75/tenzies-new-design.git
-cd tenzies-game
+cd tenzies-new-design
