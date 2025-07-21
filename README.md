@@ -2,6 +2,8 @@
 
 A fun and interactive browser-based dice game built with React. The goal is simple: roll the dice until all of them show the same number. Lock the dice you want to keep and roll the rest. Try to achieve the goal in as few rolls as possible!
 
+**👉 [Play the Live Game Here](https://htga.in/tenzies/)**
+
 ![Tenzies Gameplay](/public/preview.png)
 
 > Confetti included when you win 🎉
