@@ -1,12 +1,41 @@
-# React + Vite
+# 🎲 Tenzies Game
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A fun and interactive browser-based dice game built with React. The goal is simple: roll the dice until all of them show the same number. Lock the dice you want to keep and roll the rest. Try to achieve the goal in as few rolls as possible!
 
-Currently, two official plugins are available:
+![Tenzies Gameplay](/preview.png)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+> Confetti included when you win 🎉
 
-## Expanding the ESLint configuration
+## 🕹️ How to Play
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+1. Click on the dice you want to **hold** (they will stay the same on the next roll).
+2. Click **"New Game"** (or **"Roll"**) to reroll the unheld dice.
+3. Keep going until **all 10 dice show the same number** and are held.
+4. Try to win in the lowest number of rolls!
+
+## 🛠️ Built With
+
+- ⚛️ React
+- 💅 CSS (with animations and transitions)
+- 🎉 `react-confetti` (or your own confetti logic)
+- JavaScript ES6+
+
+## 📦 Features
+
+- 🎯 Win detection logic
+- 🎲 Dice hold and reroll functionality
+- 🔢 Roll count tracking
+- 🎉 Confetti animation when you win
+- 🌙 Dark-themed UI with soft neon-style highlights
+
+## 📷 Screenshot
+
+![Tenzies Game Win State](/previewWin.png)
+
+## 🚀 Getting Started
+
+### Clone the Repository
+
+```bash
+git clone https://github.com/htga75/tenzies-new-design.git
+cd tenzies-game
