@@ -4,7 +4,6 @@
 // import './App.css'
 import { useState } from "react"
 import Card from "./Card"
-import './card.css'
 import ReactConfetti from "react-confetti"
 
 function App() {

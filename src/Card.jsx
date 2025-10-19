@@ -5,6 +5,7 @@ import boopSfx from './assets/sounds/boop.mp3';
 import Win from './assets/sounds/Win.wav'
 import confetti from './assets/sounds/confetti.mp3'
 import dice from './assets/sounds/dice.mp3'
+import './card.css'
 
 /*
     To do:
